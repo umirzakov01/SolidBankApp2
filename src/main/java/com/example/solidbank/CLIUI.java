@@ -1,2 +1,4 @@
-package com.example.solidbank;public interface CLIUI {
+package com.example.solidbank;
+
+public interface CLIUI extends CreateAccountOperationUI{
 }
