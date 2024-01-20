@@ -1,5 +1,9 @@
 package com.example.solidbank;
 
-public interface AccountDepositeService {
-    
+import lombok.AllArgsConstructor;
+
+public interface AccountDepositService {
+
+
+     void deposit(double amount, Account account);
 }

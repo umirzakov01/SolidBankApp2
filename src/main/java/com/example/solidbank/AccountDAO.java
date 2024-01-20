@@ -6,8 +6,8 @@ public interface AccountDAO {
     List<Account> getClientAccounts(String clientID);
     void createNewAccount(Account account);
     void updateAccount(Account account);
-    List<Account> getCLientAccountsByType(String clientID,String accountType);
-    AccountWithdraw getClientWithdrawAccount(String clientID,String accountID);
-    Account getCLientAccount(String clientID,String accountID);
+    List<Account> getClientAccountsByType(String clientID, String accountType);
+    AccountWithdraw getClientWithdrawAccount(String clientID, String accountID);
+    Account getClientAccount(String clientID, String accountID);
 
 }

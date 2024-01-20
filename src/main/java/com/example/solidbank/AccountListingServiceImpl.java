@@ -1,22 +1,26 @@
 package com.example.solidbank;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import java.util.List;
 
+@Component
 public class AccountListingServiceImpl implements AccountListingService {
+    @Autowired
     private AccountDAO accountDAO;
 
-    public AccountListingServiceImpl(AccountDAO accountDAO) {
-        this.accountDAO = accountDAO;
-    }
+    public AccountListingServiceImpl(AccountDAO accountDAO) {}
+
 
     @Override
     public Account getClientAccount(String clientID, String accountID) {
-        return accountDAO.getCLientAccount(clientID,accountID);
+        return accountDAO.getClientAccount(clientID, accountID);
     }
 
     @Override
     public AccountWithdraw getClientWithdrawAccount(String clientID, String accountID) {
-        return accountDAO.getClientWithdrawAccount(clientID,accountID);
+        return accountDAO.getClientWithdrawAccount(clientID, accountID);
     }
 
     @Override
@@ -26,12 +30,7 @@ public class AccountListingServiceImpl implements AccountListingService {
 
     @Override
     public List<Account> getClientAccountsByType(String clientID, String accountType) {
-        return accountDAO.getCLientAccountsByType(clientID,accountType);
-    }
-
-    @Override
-    public Account getAccount(String accountID) {
-        return null;
+        return accountDAO.getClientAccountsByType(clientID, accountType);
     }
 
 

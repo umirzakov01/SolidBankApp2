@@ -1,11 +1,12 @@
 package com.example.solidbank;
 
+import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+@AllArgsConstructor
 public class AccountCreationServiceImpl implements AccountCreationService{
+    @Autowired
     private AccountDAO accountDAO;
 
-    public AccountCreationServiceImpl(AccountDAO accountDAO) {
-        this.accountDAO = accountDAO;
-    }
 
 
     @Override

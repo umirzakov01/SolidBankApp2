@@ -1,2 +1,9 @@
-package com.example.solidbank;public interface WithdrawDepositOperationCLIUI {
+package com.example.solidbank;
+
+public interface WithdrawDepositOperationCLIUI {
+    double requestCLientAmount();
+    String requestClientAccountNumber();
+
+
+
 }

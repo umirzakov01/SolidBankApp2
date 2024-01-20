@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
-public class Account {
+public abstract class Account {
     private String accountType;
     private String id;
     private String clientID;
